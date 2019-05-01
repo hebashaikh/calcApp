@@ -4,36 +4,37 @@ import { Constants } from 'expo';
 
 export default class App extends Component {
    state = {
-        teamOneScore: 0,
-        teamTwoScore: 0,
+        total: 0,
+        number: 0,
+        newnumber:0,
     }
 
-    teamOneTouchdown = () => {
+    multiply = () => {
         // update teamOneScore by 7
         this.setState({
-            teamOneScore: this.state.teamOneScore + 7,
+            total: this.state.number * newnumber,
         })
     }
 
 
-    teamOneFieldGoal = () => {
+    division = () => {
         // update teamOneScore by 3
         this.setState({
-            teamOneScore: this.state.teamOneScore + 3,
+            total: this.state.number / newnumber,
         })
     }
 
-    teamTwoTouchdown = () => {
+    addition = () => {
         // update teamTwoScore by 7
         this.setState({
-            teamTwoScore: this.state.teamTwoScore + 7,
+            total: this.state.number + newnumber,
         })
     }
 
-    teamTwoFieldGoal = () => {
+    subtraction = () => {
         // update teamTwoScore by 3
         this.setState({
-            teamTwoScore: this.state.teamTwoScore + 3,
+            teamTwoScore: this.state.number - newnumber,
         })
     }
 
@@ -41,29 +42,29 @@ export default class App extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.paragraph}>
-                    FOOTBALL SCOREKEEPER
+                    CALCULATOR
                 </Text>
 
                 <View style={styles.buttonContainer}>
                     <TouchableHighlight
                         style={styles.button}
                         onPress = {() => {
-                            this.teamOneTouchdown();
+                            this.multiply();
                         }}
 
                     >
                         <Text style={styles.buttonText}>
-                            TEAM 1 TOUCHDOWN!
+                            *
                         </Text>
                     </TouchableHighlight>
                     <TouchableHighlight
                         style={styles.button}
                         onPress = {() => {
-                            this.teamOneFieldGoal();
+                            this.division();
                         }}
                     >
                         <Text style={styles.buttonText}>
-                            TEAM 1 FIELD GOAL!
+                            /
                         </Text>
                     </TouchableHighlight>
                 </View>
@@ -72,22 +73,22 @@ export default class App extends Component {
                     <TouchableHighlight
                         style={styles.button}
                         onPress = {() => {
-                            this.teamTwoTouchdown();
+                            this.addition();
                         }}
                     >
                         <Text style={styles.buttonText}>
-                            TEAM 2 TOUCHDOWN!
+                            +
                         </Text>
                     </TouchableHighlight>
 
                     <TouchableHighlight
                         style={styles.button}
                         onPress = {() => {
-                            this.teamTwoFieldGoal();
+                            this.subtraction();
                         }}
                     >
                         <Text style={styles.buttonText}>
-                            TEAM 2 FIELD GOAL!
+                            -
                         </Text>
                     </TouchableHighlight>
                 </View>
@@ -115,15 +116,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'green',
     },
-    paragraph: {
-        color: 'white',
-        fontSize: 20,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
     buttonContainer: {
         flexDirection: 'row',
-
     },
     button: {
         height: 50,
