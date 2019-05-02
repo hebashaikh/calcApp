@@ -53,7 +53,7 @@ export default class App extends Component {
                         }}
 
                     >
-                        <Text style={styles.buttonText}>
+                        <Text style={styles.operators}>
                             *
                         </Text>
                     </TouchableHighlight>
@@ -63,7 +63,7 @@ export default class App extends Component {
                             this.division();
                         }}
                     >
-                        <Text style={styles.buttonText}>
+                        <Text style={styles.operators}>
                             /
                         </Text>
                     </TouchableHighlight>
@@ -76,7 +76,7 @@ export default class App extends Component {
                             this.addition();
                         }}
                     >
-                        <Text style={styles.buttonText}>
+                        <Text style={styles.operators}>
                             +
                         </Text>
                     </TouchableHighlight>
@@ -87,11 +87,41 @@ export default class App extends Component {
                             this.subtraction();
                         }}
                     >
-                        <Text style={styles.buttonText}>
+                        <Text style={styles.operators}>
                             -
                         </Text>
                     </TouchableHighlight>
                 </View>
+                <Text style={styles.buttonText}>
+                    1
+                </Text>
+                <Text style={styles.buttonText}>
+                    2
+                </Text>
+                <Text style={styles.buttonText}>
+                    3
+                </Text>
+                <Text style={styles.buttonText}>
+                    4
+                </Text>
+                <Text style={styles.buttonText}>
+                    5
+                </Text>
+                <Text style={styles.buttonText}>
+                    6
+                </Text>
+                <Text style={styles.buttonText}>
+                    7
+                </Text>
+                <Text style={styles.buttonText}>
+                    8
+                </Text>
+                <Text style={styles.buttonText}>
+                    9
+                </Text>
+                <Text style={styles.zerobutton}>
+                    0
+                </Text>
 
                 <Text style={styles.paragraph}>
                     Team 1:
@@ -114,7 +144,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'green',
+        backgroundColor: 'gray',
+    },
+    operators: {
+      color:'orange',
+      fontSize:10,
     },
     buttonContainer: {
         flexDirection: 'row',
@@ -129,7 +163,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     buttonText: {
-        color: 'white',
-        fontSize: 10,
+        color: #D3D3D3,
+        fontSize: 15,
     },
 });
