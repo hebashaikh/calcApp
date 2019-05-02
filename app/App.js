@@ -47,7 +47,7 @@ export default class App extends Component {
 
                 <View style={styles.buttonContainer}>
                     <TouchableHighlight
-                        style={styles.button}
+                        style={styles.operatorformat}
                         onPress = {() => {
                             this.multiply();
                         }}
@@ -58,7 +58,7 @@ export default class App extends Component {
                         </Text>
                     </TouchableHighlight>
                     <TouchableHighlight
-                        style={styles.button}
+                        style={styles.operatorformat}
                         onPress = {() => {
                             this.division();
                         }}
@@ -67,11 +67,8 @@ export default class App extends Component {
                             /
                         </Text>
                     </TouchableHighlight>
-                </View>
-
-                <View style={styles.buttonContainer}>
                     <TouchableHighlight
-                        style={styles.button}
+                        style={styles.operatorformat}
                         onPress = {() => {
                             this.addition();
                         }}
@@ -82,7 +79,7 @@ export default class App extends Component {
                     </TouchableHighlight>
 
                     <TouchableHighlight
-                        style={styles.button}
+                        style={styles.operatorformat}
                         onPress = {() => {
                             this.subtraction();
                         }}
@@ -92,36 +89,86 @@ export default class App extends Component {
                         </Text>
                     </TouchableHighlight>
                 </View>
-                <Text style={styles.buttonText}>
-                    1
-                </Text>
-                <Text style={styles.buttonText}>
-                    2
-                </Text>
-                <Text style={styles.buttonText}>
-                    3
-                </Text>
-                <Text style={styles.buttonText}>
-                    4
-                </Text>
-                <Text style={styles.buttonText}>
-                    5
-                </Text>
-                <Text style={styles.buttonText}>
-                    6
-                </Text>
-                <Text style={styles.buttonText}>
-                    7
-                </Text>
-                <Text style={styles.buttonText}>
-                    8
-                </Text>
-                <Text style={styles.buttonText}>
-                    9
-                </Text>
-                <Text style={styles.zerobutton}>
-                    0
-                </Text>
+                <View style={styles.buttonContainer}>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            1
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            2
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            3
+                        </Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonContainer}>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            4
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            5
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            6
+                        </Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.buttonContainer}>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            7
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            8
+                        </Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>
+                            9
+                        </Text>
+                    </TouchableHighlight>
+                </View>
+
+                <View style={styles.buttonContainer}>
+                    <TouchableHighlight
+                        style={styles.zerobutton}
+                    >
+                        <Text style={styles.buttonText}>
+                            0
+                        </Text>
+                    </TouchableHighlight>
+                </View>
+
 
                 <Text style={styles.paragraph}>
                     Team 1:
@@ -142,12 +189,12 @@ export default class App extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'gray',
+        backgroundColor: 'black',
+        position: 'absolute',
+        bottom:0
     },
     operators: {
-      color:'orange',
+      color:'white',
       fontSize:10,
     },
     buttonContainer: {
@@ -156,14 +203,32 @@ const styles = StyleSheet.create({
     button: {
         height: 50,
         width: 80,
-        backgroundColor: 'green',
+        backgroundColor: 'gray',
         borderColor: 'white',
         borderWidth: 1,
         alignItems: 'center',
         justifyContent: 'center',
     },
+    operatorformat:{
+        height: 50,
+        width: 60,
+        backgroundColor: 'orange',
+        borderColor: 'white',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    zerobutton: {
+        height: 50,
+        width: 240,
+        backgroundColor: 'gray',
+        borderColor: 'white',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'left',
+    },
     buttonText: {
-        color: #D3D3D3,
+        color: 'white',
         fontSize: 15,
     },
 });
